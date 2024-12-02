@@ -1,45 +1,107 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: monospace;
-    color: white;
-    /* background-color: #252525; */
-    background-color: rgba(0, 0, 0, 0.945);
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: monospace;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.945);
+  font-weight: bold;
 }
 
 form {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .inputArea {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 5px;
+}
+.inputArea label {
+  margin-bottom: 5px;
 }
 .inputArea input {
-    height: 40px;
-    box-sizing:border-box
+  height: 40px;
+  border-radius: 2px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding-left: 10px;
 }
-
 .button {
-    display: flex;
-    flex-direction: column;
-    width: 15%;
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+  margin: 5px;
+}
+.button label {
+  margin-bottom: 5px;
 }
 .button button {
-    height:40px;
+  background-color: black;
+  color: #ffffff;
+  height: 40px;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  cursor: pointer;
+  &:after,
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #ffffff;
+    transition: transform 0.2s;
+  }
+  &:after {
+    transform: translate(3px, 3px);
+  }
+  &:before {
+    transform: translate(-3px, -3px);
+  }
+  &:hover {
+    &:after,
+    &:before {
+      transform: translate(0);
+    }
+  }
 }
 .textArea {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.textArea label {
+  margin-bottom: 5px;
 }
 .textArea textarea {
-    border-radius: 6px;
-    resize: none;
+  border-radius: 10px;
+  background-color: white;
+  resize: none;
+  animation: colorChange 5s infinite;
 }
 
+@keyframes colorChange {
+  0% {
+    box-shadow: 0 20px 50px rgb(22, 16, 137);
+  }
+  25% {
+    box-shadow: 0 20px 50px rgb(183, 0, 255);
+  }
+  50% {
+    box-shadow: 0 20px 50px rgb(251, 0, 255);
+  }
+  75% {
+    box-shadow: 0 20px 50px rgb(0, 0, 255);
+  }
+  100% {
+    box-shadow: 0 20px 50px rgb(22, 16, 137);
+  }
+}
