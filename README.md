@@ -3,6 +3,12 @@
 ## Genel Bakış
 Bu kod input değerine yazılan değeri run ederek JSON dosyasının içerisinde arar ve altındaki değerleri döndürür.
 
+#### Projenin çalışabilmesi için:  
+1. `cd` komutu ile projenin içerisine giriyoruz.  
+2. `npm install` ile node modules ekliyoruz.  
+3. Ardından `npm run dev` komutu ile projemizi çalıştırılabilir hale getiriyoruz.  
+
+
 ## Başlangıç
 Öncelikle React ile projeyi geliştireceğimden daha hızlı işlem yapmamı ve yaptığım işlemin çıktısını daha hızlı almamı sağlayan Vite ile projeyi create ettim.
 
