@@ -30,6 +30,21 @@ function App() {
 
   return (  
     <div>
+      <form onSubmit={handleInput} className='area'>
+        <div>
+        <label>Input</label>
+        <input type="text" className='inputArea'
+        value={inputValue}
+        onChange = {(e) => setInputValue(e.target.value)}
+        placeholder='exp: components.securitySchemes.petstore_auth'/>
+        </div>
+        <div>
+          <label>Submit Form</label>
+          <button type='submit' className='button'>run</button>
+        </div>
+      </form>
+      <textarea className='textArea'
+        value={textAreaValue} readOnly cols="80" rows="25"></textarea>
     </div>
   )
 }
