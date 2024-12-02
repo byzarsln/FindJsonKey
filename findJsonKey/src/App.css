@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+    color: white;
+    /* background-color: #252525; */
+    background-color: rgba(0, 0, 0, 0.945);
+
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputArea {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
+.inputArea input {
+    height: 40px;
+    box-sizing:border-box
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+}
+.button button {
+    height:40px;
+}
+.textArea {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.textArea textarea {
+    border-radius: 6px;
+    resize: none;
+}
+
